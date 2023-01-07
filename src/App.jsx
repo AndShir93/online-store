@@ -1,19 +1,21 @@
 import React from 'react';
+import style from './App.module.css';
+import bg from './bg.jpg';
+import Counter from "./components/Counter/Counter";
 
 const App = () => {
-  const [state, setState] = React.useState(0);
-  const handleClick = (value) => {
-
-    setState(value + 1);
-  };
 
   return (
     <div>
+      <img
+        width={500}
+        src={bg}
+        alt="bg"
+      />
+      <br/>
       App
       <br/>
-      {state}
-      <br/>
-      <button onClick={() => handleClick(state)}>Click</button>
+      <Counter/>
     </div>
   );
 };
