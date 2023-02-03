@@ -2,10 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
+  const { mode } = env;
+  const devtool = mode === 'development' ? { devtool: 'source-map' } : {};
 
   return {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
-    devtool: 'source-map',
+    ...devtool,
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'index.js',
@@ -14,12 +16,7 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          loader: 'ts-loader',
-        },
-        {
-          test: /\.jsx?$/,
+          test: /\.[t,j]sx?$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
         },
