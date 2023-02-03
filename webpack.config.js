@@ -44,6 +44,7 @@ module.exports = (env) => {
     devServer: {
       static: './src',
       port: 3000,
+      compress: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
