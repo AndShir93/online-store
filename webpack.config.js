@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env) => {
 
   return {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     devtool: 'source-map',
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -13,6 +13,11 @@ module.exports = (env) => {
     },
     module: {
       rules: [
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          loader: 'ts-loader',
+        },
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
@@ -54,7 +59,7 @@ module.exports = (env) => {
     ],
     mode: env.mode,
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
   };
 };
