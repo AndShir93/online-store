@@ -5,14 +5,16 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --open --env mode=development",
-    "build": "webpack --env mode=production"
+    "build": "webpack --env mode=production",
+    "lint": "npx eslint . --ext .tsx,.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrey <wugandrey@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-testing-library": "^8.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -25,9 +27,13 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.0",
     "@types/webpack-env": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
+    "eslint": "8.2.0",
+    "eslint-plugin-typescript": "^0.14.0",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
