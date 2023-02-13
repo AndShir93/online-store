@@ -25,7 +25,9 @@ const Button: React.FC<Props> = (props) => {
     styles.button,
     styles[buttonSelector],
     className,
-  ].join(' ').trim();
+  ]
+    .join(' ')
+    .trim();
 
   return (
     <button
