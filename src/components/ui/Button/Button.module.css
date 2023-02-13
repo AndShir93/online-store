@@ -1,0 +1,130 @@
+.button{
+  border-radius: 4px;
+  color: #fff;
+  padding: 18px 16px;
+  cursor: pointer;
+  border: 0;
+  font-family: Comfortaa-Bold;
+  font-size: 16px;
+}
+.button:disabled{
+  cursor: not-allowed;
+}
+.primary{
+  background: #FF6633;
+}
+.primary_outlined{
+  color: #FF6633;
+  background: transparent;
+  border: 1px solid #FF6633;
+}
+.primary_text{
+  color: #FF6633;
+  background: transparent;
+}
+.primary:hover,
+.primary_outlined:hover{
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+.primary_text:hover{
+  box-shadow: 0px 0px 11px rgb(255 102 51 / 20%);
+}
+.primary:active{
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.primary_outlined:active,
+.primary_text:active{
+  box-shadow: inset 0px 0px 1px 2px rgb(0 0 0 / 20%);
+}
+.primary:focus-visible{
+  outline: none;
+}
+.primary:disabled{
+  color: #FF6633;
+  background: #FCD5BA;
+  box-shadow: none;
+}
+.primary_outlined:disabled,
+.primary_text:disabled{
+  box-shadow: none;
+  opacity: 0.6;
+}
+.secondary{
+  background: #70C05B;
+}
+.secondary_outlined{
+  color: #70C05B;
+  background: transparent;
+  border: 1px solid #70C05B;
+}
+.secondary_text{
+  color: #70C05B;
+  background: transparent;
+}
+.secondary:hover,
+.secondary_outlined:hover{
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.secondary_text:hover{
+  box-shadow: 0px 0px 11px rgba(112, 192, 91, 0.2);
+}
+.secondary:active{
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.secondary_outlined:active,
+.secondary_text:active{
+  box-shadow: inset 0px 0px 1px 2px rgb(0 0 0 / 20%);
+}
+.secondary:focus-visible{
+  outline: none;
+}
+.secondary:disabled{
+  color: #70C05B;
+  background: #E5FFDE;
+  box-shadow: none;
+}
+.secondary_outlined:disabled,
+.secondary_text:disabled{
+  box-shadow: none;
+  opacity: 0.6;
+}
+.gray{
+  color: #606060;
+  background: #F3F2F1;
+}
+.gray_outlined{
+  color: #606060;
+  background: transparent;
+  border: 1px solid #F3F2F1;
+}
+.gray_text{
+  color: #606060;
+  background: transparent;
+}
+.gray:hover,
+.gray_outlined:hover{
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+}
+.gray_text:hover{
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.1);
+}
+.gray:active{
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.gray_outlined:active,
+.gray_text:active{
+  box-shadow: inset 0px 0px 1px 2px rgb(0 0 0 / 20%);
+}
+.gray:focus-visible{
+  outline: none;
+}
+.gray:disabled{
+  color: #BFBFBF;
+  background: #ececec;
+  box-shadow: none;
+}
+.gray_outlined:disabled,
+.gray_text:disabled{
+  box-shadow: none;
+  opacity: 0.6;
+}
