@@ -1,0 +1,10 @@
+.basketButton{
+  width: 150px;
+  display: flex;
+}
+.valueButton{
+  flex-grow: 1;
+}
+.valueButton:active{
+  box-shadow: none;
+}

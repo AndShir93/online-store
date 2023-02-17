@@ -5,14 +5,20 @@ import { ButtonTypes } from '../Button';
 
 interface Props {
   type: ButtonTypes['type'];
+  className?: string;
   children: JSX.Element[];
 }
 
 const ButtonGroup: React.FC<Props> = (props) => {
-  const { type, children } = props;
+  const {
+    type,
+    className = '',
+    children,
+  } = props;
+  const rootClassName = [ styles.buttonGroup, className ].join(' ').trim();
 
   return (
-    <div className={styles.buttonGroup}>
+    <div className={rootClassName}>
       {children.map((button) => ({
         ...button,
         props: {

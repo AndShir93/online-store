@@ -8,8 +8,8 @@ export default {
   component: ButtonIntoBasketComponent,
 } as ComponentMeta<typeof ButtonIntoBasketComponent>;
 
-const Template: ComponentStory<typeof ButtonIntoBasketComponent> = () => (
-  <ButtonIntoBasketComponent />
+const Template: ComponentStory<typeof ButtonIntoBasketComponent> = (args) => (
+  <ButtonIntoBasketComponent {...args} />
 );
 
 export const ButtonIntoBasket = Template.bind({});
