@@ -33,3 +33,6 @@
     src: local(''),
     url('./fonts/Comfortaa-SemiBold.woff2') format('woff2');
 }
+p{
+    margin: 0;
+}
