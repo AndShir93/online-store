@@ -33,11 +33,14 @@
     "eqeqeq": "error",
     "no-var": "error",
     "arrow-parens": "error",
-    "array-bracket-spacing": "error",
+    "array-bracket-spacing": [ "error", "always" ],
     "comma-spacing": [ "error", { "before": false, "after": true } ],
     "jsx-quotes": [ "error", "prefer-double" ],
     "semi": [ "error", "always" ]
   },
   "extends": [ "eslint:recommended", "plugin:@typescript-eslint/recommended" ],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "JSX": true
+  }
 }

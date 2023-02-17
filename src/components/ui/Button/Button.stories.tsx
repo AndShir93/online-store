@@ -32,3 +32,7 @@ const Template: ComponentStory<typeof ButtonComponent> = (args) => (
 
 export const Button = Template.bind({});
 
+Button.args = {
+  children: 'Click',
+};
+

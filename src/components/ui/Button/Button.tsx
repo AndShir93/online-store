@@ -1,15 +1,7 @@
 import * as React from 'react';
 import styles from './Button.module.css';
+import { Props } from './Button.types';
 
-
-interface Props {
-  type?: 'primary' | 'secondary' | 'gray';
-  variant?: 'default' | 'outlined' | 'text';
-  children?: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
-  onClick?: (event:  React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-}
 
 const Button: React.FC<Props> = (props) => {
   const {
