@@ -1,0 +1,30 @@
+.label {
+  font-family: Comfortaa-Light;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #8F8F8F;
+}
+.input{
+  font-family: Comfortaa-Light;
+  height: 40px;
+  border: 1px solid #BFBFBF;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0 16px;
+}
+.input:hover{
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.input:focus{
+  border-color: #70C05B;
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.input:focus-visible{
+  outline: none;
+}
+.input:disabled{
+  color: #BFBFBF;
+  background: #F3F2F1;
+  border: 1px solid #BFBFBF;
+  cursor: not-allowed;
+}

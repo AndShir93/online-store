@@ -29,7 +29,7 @@ const renderCounter: RenderBasket = (amountState) => {
    );
 };
 
-const renderButton: RenderBasket = ([ , setAmount]) => (
+const renderButton: RenderBasket = ([ , setAmount ]) => (
   <Button
     type="secondary"
     onClick={() => setAmount((prevState) => prevState + 1)}
