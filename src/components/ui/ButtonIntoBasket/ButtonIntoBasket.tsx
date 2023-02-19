@@ -14,7 +14,7 @@ type RenderAmountButton = (
 ) => void;
 
 type RenderBasketButton = (
-  state: [ number, React.Dispatch<React.SetStateAction<number>> ],
+  setAmount: React.Dispatch<React.SetStateAction<number>>,
 ) => JSX.Element;
 
 const renderCounter: RenderAmountButton = (props, amountState) => {
@@ -51,7 +51,7 @@ const renderCounter: RenderAmountButton = (props, amountState) => {
    );
 };
 
-const renderButton: RenderBasketButton = ([ , setAmount]) => (
+const renderButton: RenderBasketButton = (setAmount ) => (
   <Button
     type="secondary"
     className={styles.basketButton}
@@ -63,9 +63,9 @@ const renderButton: RenderBasketButton = ([ , setAmount]) => (
 
 const ButtonIntoBasket: React.FC<Props> = (props) => {
   const stateAmount = React.useState<number>(2);
-  const [ amount ] = stateAmount;
+  const [ amount, setAmount ] = stateAmount;
   const content = amount === 0
-    ? renderButton(stateAmount)
+    ? renderButton(setAmount)
     : renderCounter(props, stateAmount);
 
   return (

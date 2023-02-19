@@ -1,0 +1,35 @@
+.label {
+  font-family: Comfortaa-Bold;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #8F8F8F;
+}
+.input{
+  width: 250px;
+  font-family: Comfortaa-Bold;
+  height: 40px;
+  border: 1px solid #BFBFBF;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.input:hover{
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.input:focus{
+  border-color: #70C05B;
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.input:focus-visible{
+  outline: none;
+}
+.input:disabled{
+  color: #BFBFBF;
+  background: #F3F2F1;
+  border: 1px solid #BFBFBF;
+  cursor: not-allowed;
+}
+.inputFullWidth{
+  width: 100%;
+}
