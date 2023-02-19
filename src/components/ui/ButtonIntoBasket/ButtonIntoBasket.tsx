@@ -1,27 +1,49 @@
 import * as React from 'react';
 import Button from '../Button/Button';
 import ButtonGroup from '../ButtonGroup/ButtonGroup';
+import styles from './ButtonIntoBasket.module.css';
 
 
-type RenderBasket = (
+interface Props {
+  onChangeAmount?: (value: number) => void;
+}
+
+type RenderAmountButton = (
+  props: Props,
   state: [ number, React.Dispatch<React.SetStateAction<number>> ],
+) => void;
+
+type RenderBasketButton = (
+  setAmount: React.Dispatch<React.SetStateAction<number>>,
 ) => JSX.Element;
 
-const renderCounter: RenderBasket = (amountState) => {
+const renderCounter: RenderAmountButton = (props, amountState) => {
+  const { onChangeAmount } = props;
   const [ amount, setAmount ] = amountState;
 
    return (
-     <ButtonGroup type="secondary">
+     <ButtonGroup
+       type="secondary"
+       className={styles.basketButton}
+     >
        <Button
-         onClick={() => setAmount((prevState) => prevState - 1)}
+         onClick={() => setAmount((prevState) => {
+           onChangeAmount && onChangeAmount(prevState - 1);
+
+           return prevState - 1;
+         })}
        >
          -
        </Button>
-       <Button>
+       <Button className={styles.valueButton}>
          {amount}
        </Button>
        <Button
-         onClick={() => setAmount((prevState) => prevState + 1)}
+         onClick={() => setAmount((prevState) => {
+           onChangeAmount && onChangeAmount(prevState + 1);
+
+           return prevState + 1;
+         })}
        >
          +
        </Button>
@@ -29,21 +51,22 @@ const renderCounter: RenderBasket = (amountState) => {
    );
 };
 
-const renderButton: RenderBasket = ([ , setAmount ]) => (
+const renderButton: RenderBasketButton = (setAmount ) => (
   <Button
     type="secondary"
+    className={styles.basketButton}
     onClick={() => setAmount((prevState) => prevState + 1)}
   >
     В корзину
   </Button>
 );
 
-const ButtonIntoBasket: React.FC = () => {
+const ButtonIntoBasket: React.FC<Props> = (props) => {
   const stateAmount = React.useState<number>(2);
-  const [ amount ] = stateAmount;
+  const [ amount, setAmount ] = stateAmount;
   const content = amount === 0
-    ? renderButton(stateAmount)
-    : renderCounter(stateAmount);
+    ? renderButton(setAmount)
+    : renderCounter(props, stateAmount);
 
   return (
     <>
