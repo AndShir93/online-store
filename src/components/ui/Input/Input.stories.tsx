@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { useArgs } from '@storybook/client-api';
-import InputComponent from './Input';
 import { action } from '@storybook/addon-actions';
+import InputComponent from './Input';
 
 
 export default {
@@ -11,6 +11,11 @@ export default {
   argTypes: {
     label: { control: 'text' },
     value: { control: 'text' },
+    type: {
+      control: false,
+    },
+    className: { control: false },
+    fullWidth: { control: 'boolean' },
     disabled: { control: 'boolean' },
     onChange: {
       action: 'change',
@@ -47,5 +52,6 @@ Input.args = {
   label: 'Label',
   value: '',
   disabled: false,
+  fullWidth: false,
 };
 
